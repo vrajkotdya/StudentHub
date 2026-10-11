@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub — Admin Dashboard</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/interactive.css">
+    <link rel="stylesheet" href="css/data-components.css">
+</head>
+<body>
+
+    <!-- Top Notification Banner -->
+    <div id="notification-banner" class="notification-banner">
+        <span>🔔 <strong>Notice:</strong> System auto-backup completed successfully at 02:00 AM. Storage nominal.</span>
+        <button id="notification-close-btn" class="notification-close" type="button" aria-label="Dismiss Announcement">&times;</button>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="header-brand">
+                <h1>StudentHub</h1>
+                <p>College Administration Control Panel</p>
+            </div>
+            <div class="header-nav-wrapper">
+                <nav aria-label="Admin Portal Navigation">
+                    <ul>
+                        <li><a href="index.html">Portal Home</a></li>
+                        <li><a href="admin.html">Dashboard</a></li>
+                        <li><a href="#student-management">Students</a></li>
+                        <li><a href="#event-management">Events</a></li>
+                        <li><a href="feedback.html">Feedback Reviews</a></li>
+                        <li><a href="login.html">Log Out</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button id="theme-toggle-btn" class="theme-toggle-btn" type="button" aria-label="Toggle Theme">🌙 Dark</button>
+                    <button id="hamburger-btn" class="hamburger-btn" type="button" aria-label="Toggle Navigation Menu" aria-expanded="false">☰ Menu</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Administrative Overview Section -->
+        <section>
+            <h2>Administrative Overview</h2>
+            <p>Welcome, Administrator (Admin Office, System Role: Root Admin).</p>
+
+            <!-- Metrics Summary -->
+            <div class="table-container">
+                <table border="1">
+                    <caption>Portal Metrics Overview</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Metric</th>
+                            <th scope="col">Count</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Total Enrolled Students</td>
+                            <td>1,240</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>Active Campus Events</td>
+                            <td>14</td>
+                            <td>Published</td>
+                        </tr>
+                        <tr>
+                            <td>Total Event Registrations</td>
+                            <td>512</td>
+                            <td>Recorded</td>
+                        </tr>
+                        <tr>
+                            <td>Unresolved Feedback Inquiries</td>
+                            <td>8</td>
+                            <td>Pending Review</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Quick Actions Section -->
+        <section>
+            <h2>Quick Administrative Actions</h2>
+            <p>
+                <a href="#add-event">+ Add New Event</a> | 
+                <a href="#add-student">+ Register New Student</a> | 
+                <a href="#reports">Generate Reports</a>
+            </p>
+        </section>
+
+        <!-- Recent Registrations Section -->
+        <section id="event-management">
+            <h2>Recent Event Registrations</h2>
+            <div class="table-container">
+                <table border="1">
+                    <caption>Latest Event Registrations</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Reg ID</th>
+                            <th scope="col">Student Name</th>
+                            <th scope="col">Roll Number</th>
+                            <th scope="col">Event Registered</th>
+                            <th scope="col">Registration Date</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#REG-101</td>
+                            <td>Alex Johnson</td>
+                            <td>2026-CS-042</td>
+                            <td>Web Development Hackathon</td>
+                            <td>2026-09-14</td>
+                            <td><a href="#">View</a> | <a href="#">Approve</a></td>
+                        </tr>
+                        <tr>
+                            <td>#REG-102</td>
+                            <td>Priya Sharma</td>
+                            <td>2026-IT-018</td>
+                            <td>Robotics &amp; AI Workshop</td>
+                            <td>2026-09-14</td>
+                            <td><a href="#">View</a> | <a href="#">Approve</a></td>
+                        </tr>
+                        <tr>
+                            <td>#REG-103</td>
+                            <td>Rohan Patel</td>
+                            <td>2026-EC-055</td>
+                            <td>Annual Sports Meet</td>
+                            <td>2026-09-13</td>
+                            <td><a href="#">View</a> | <a href="#">Approve</a></td>
+                        </tr>
+                        <tr>
+                            <td>#REG-104</td>
+                            <td>Sneha Reddy</td>
+                            <td>2026-CS-089</td>
+                            <td>Web Development Hackathon</td>
+                            <td>2026-09-13</td>
+                            <td><a href="#">View</a> | <a href="#">Approve</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Student Management Section -->
+        <section id="student-management">
+            <h2>Registered Student Directory</h2>
+            <p>Manage and search student records loaded dynamically from the JSON student repository.</p>
+
+            <!-- Student Directory Toolbar -->
+            <div class="data-toolbar" role="search" aria-label="Student Directory Search and Filter">
+                <div class="toolbar-group">
+                    <label for="student-search">Search Students:</label>
+                    <input type="search" id="student-search" placeholder="Search by name, roll no, email...">
+                </div>
+
+                <div class="toolbar-group">
+                    <label for="student-course-filter">Filter by Course:</label>
+                    <select id="student-course-filter">
+                        <option value="">All Courses</option>
+                        <option value="B.Tech CSE">B.Tech CSE</option>
+                        <option value="B.Tech IT">B.Tech IT</option>
+                        <option value="B.Tech ECE">B.Tech ECE</option>
+                        <option value="BCA">BCA</option>
+                        <option value="B.Sc CS">B.Sc CS</option>
+                        <option value="MCA">MCA</option>
+                    </select>
+                </div>
+
+                <div class="toolbar-group">
+                    <label for="student-year-filter">Filter by Year:</label>
+                    <select id="student-year-filter">
+                        <option value="">All Years</option>
+                        <option value="1st Year">1st Year</option>
+                        <option value="2nd Year">2nd Year</option>
+                        <option value="3rd Year">3rd Year</option>
+                        <option value="4th Year">4th Year</option>
+                    </select>
+                </div>
+
+                <div class="toolbar-group">
+                    <label for="student-sort">Sort By:</label>
+                    <select id="student-sort">
+                        <option value="roll-asc">Roll No (Ascending)</option>
+                        <option value="roll-desc">Roll No (Descending)</option>
+                        <option value="name-asc">Name (A to Z)</option>
+                        <option value="name-desc">Name (Z to A)</option>
+                    </select>
+                </div>
+
+                <button type="button" id="student-reset-btn" class="reset-btn">Reset</button>
+            </div>
+
+            <!-- Loading State -->
+            <div id="students-loading" class="data-loading" aria-live="polite">
+                <span class="data-spinner" aria-hidden="true"></span>
+                <span>Loading student records from server...</span>
+            </div>
+
+            <!-- Error State -->
+            <div id="students-error" class="data-error" style="display: none;" role="alert">
+                <p>⚠️ <span class="error-message">Unable to load student directory.</span></p>
+                <button type="button" id="students-retry-btn">Try Again</button>
+            </div>
+
+            <!-- Table Container -->
+            <div class="table-container">
+                <table border="1" id="students-table">
+                    <caption>Registered Student Directory</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Roll Number</th>
+                            <th scope="col">Full Name</th>
+                            <th scope="col">Course</th>
+                            <th scope="col">Year</th>
+                            <th scope="col">Email Address</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="students-table-body" aria-live="polite">
+                        <!-- Dynamically rendered via Fetch API from data/students.json -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Pagination Bar -->
+            <div id="students-pagination" class="pagination-container" style="display: none;">
+                <div id="students-pagination-info" class="pagination-info"></div>
+                <nav id="students-pagination-nav" class="pagination-nav" aria-label="Student directory pagination"></nav>
+            </div>
+        </section>
+
+        <!-- Aside Section -->
+        <aside>
+            <h2>System Audit Log &amp; Security Alerts</h2>
+            <ul>
+                <li><strong>Admin Login:</strong> Successful login from campus subnet 192.168.1.50 on 2026-09-15.</li>
+                <li><strong>Backup Status:</strong> Database auto-backup completed successfully at 02:00 AM.</li>
+                <li><strong>System Health:</strong> Server storage usage at 18%, memory nominal.</li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <nav aria-label="Footer Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="admin.html">Admin Portal</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 StudentHub. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/theme.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/notification.js"></script>
+    <script src="js/admin-students.js"></script>
+</body>
+</html>

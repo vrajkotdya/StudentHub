@@ -1,0 +1,323 @@
+/* ==========================================================================
+   StudentHub — Interactive Stylesheet (css/interactive.css)
+   Hamburger Menu, Notification Banner, FAQ Accordion, Modal, and Slider
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Notification Banner
+   -------------------------------------------------------------------------- */
+.notification-banner {
+    background-color: #0284c7;
+    color: #ffffff;
+    padding: 0.6rem 1.25rem;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.notification-banner .notification-close {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 0.5rem;
+    line-height: 1;
+    margin: 0;
+}
+
+.notification-banner .notification-close:hover {
+    color: #f1f5f9;
+}
+
+body.dark-theme .notification-banner {
+    background-color: #0369a1;
+}
+
+/* --------------------------------------------------------------------------
+   2. Hamburger Menu Button & Header Navigation Actions
+   -------------------------------------------------------------------------- */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hamburger-btn {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin: 0;
+}
+
+.hamburger-btn:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+@media (max-width: 860px) {
+    .hamburger-btn {
+        display: inline-block;
+    }
+
+    .header-nav-wrapper {
+        width: 100%;
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .header-actions {
+        position: absolute;
+        top: 0.85rem;
+        right: 1.25rem;
+    }
+
+    header {
+        position: relative;
+    }
+
+    header nav {
+        display: none;
+        width: 100%;
+        margin-top: 0.75rem;
+        padding-top: 0.75rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    header nav.nav-open {
+        display: block;
+    }
+
+    header nav.nav-open ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.4rem;
+    }
+
+    header nav.nav-open a {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+@media (min-width: 861px) {
+    .hamburger-btn {
+        display: none !important;
+    }
+
+    header nav {
+        display: block !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   3. FAQ Accordion
+   -------------------------------------------------------------------------- */
+.faq-item {
+    padding: 0;
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+}
+
+.faq-question-btn {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 1rem 1.25rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1a365d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin: 0;
+    border-radius: 0;
+}
+
+.faq-question-btn:hover {
+    background-color: rgba(13, 110, 253, 0.05);
+    color: #0d6efd;
+}
+
+body.dark-theme .faq-question-btn {
+    color: #f1f5f9;
+}
+
+body.dark-theme .faq-question-btn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #60a5fa;
+}
+
+.faq-icon {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0d6efd;
+    transition: transform 0.2s ease;
+}
+
+body.dark-theme .faq-icon {
+    color: #60a5fa;
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 1.25rem 1.25rem 1.25rem;
+    color: #475569;
+    border-top: 1px dashed #e2e8f0;
+}
+
+body.dark-theme .faq-answer {
+    color: #94a3b8;
+    border-top-color: #334155;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+/* --------------------------------------------------------------------------
+   4. Modal Popup
+   -------------------------------------------------------------------------- */
+.modal-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.modal-backdrop.active {
+    display: flex;
+}
+
+.modal-window {
+    background-color: #ffffff;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+    border: 1px solid #cbd5e1;
+}
+
+body.dark-theme .modal-window {
+    background-color: #1e293b;
+    border-color: #334155;
+    color: #f1f5f9;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+body.dark-theme .modal-header {
+    border-bottom-color: #334155;
+}
+
+.modal-header h3 {
+    margin: 0;
+}
+
+.modal-close-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: #64748b;
+    cursor: pointer;
+    margin: 0;
+    padding: 0 0.5rem;
+}
+
+.modal-close-btn:hover {
+    color: #0f172a;
+    background: transparent;
+}
+
+body.dark-theme .modal-close-btn:hover {
+    color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   5. Slider / Carousel Component
+   -------------------------------------------------------------------------- */
+.slider-container {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+body.dark-theme .slider-container {
+    background-color: #0f172a;
+    border-color: #334155;
+}
+
+.slider-track {
+    position: relative;
+    min-height: 100px;
+}
+
+.slider-slide {
+    display: none;
+}
+
+.slider-slide.active {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.25rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+body.dark-theme .slider-controls {
+    border-top-color: #334155;
+}
+
+.slider-indicator {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #64748b;
+}
+
+body.dark-theme .slider-indicator {
+    color: #94a3b8;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub — Contact</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/interactive.css">
+</head>
+<body>
+
+    <!-- Top Notification Banner -->
+    <div id="notification-banner" class="notification-banner">
+        <span>🔔 <strong>Notice:</strong> Campus Helpdesk is operational Mon&ndash;Fri from 9:00 AM to 5:00 PM.</span>
+        <button id="notification-close-btn" class="notification-close" type="button" aria-label="Dismiss Announcement">&times;</button>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="header-brand">
+                <h1>StudentHub</h1>
+                <p>Your College Student Portal</p>
+            </div>
+            <div class="header-nav-wrapper">
+                <nav aria-label="Main Navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button id="theme-toggle-btn" class="theme-toggle-btn" type="button" aria-label="Toggle Theme">🌙 Dark</button>
+                    <button id="hamburger-btn" class="hamburger-btn" type="button" aria-label="Toggle Navigation Menu" aria-expanded="false">☰ Menu</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Contact Details Section -->
+        <section>
+            <h2>Contact Us</h2>
+            <p>Have an inquiry or need assistance? Reach out through our official channels or send a message below.</p>
+
+            <address>
+                <p><strong>Campus Address:</strong> City Engineering &amp; Technology College, Knowledge Park Road, Cityville, State &ndash; 560001</p>
+                <p><strong>General Inquiries Phone:</strong> +91 98765 43210</p>
+                <p><strong>Office of the Registrar:</strong> +91 98765 43211</p>
+                <p><strong>Email Address:</strong> info@studenthub.edu</p>
+                <p><strong>Working Hours:</strong> Monday through Friday, 9:00 AM &ndash; 5:00 PM</p>
+            </address>
+        </section>
+
+        <!-- Enquiry Form Section -->
+        <section>
+            <h2>Send Us an Inquiry</h2>
+            
+            <form action="process_contact.php" method="post">
+                <div class="form-row">
+                    <div>
+                        <label for="contact-name">Your Full Name:</label><br>
+                        <input type="text" id="contact-name" name="name" required>
+                    </div>
+
+                    <div>
+                        <label for="contact-email">Your Email Address:</label><br>
+                        <input type="email" id="contact-email" name="email" required>
+                    </div>
+                </div>
+
+                <p>
+                    <label for="contact-subject">Subject:</label><br>
+                    <input type="text" id="contact-subject" name="subject" required>
+                </p>
+
+                <p>
+                    <label for="contact-dept">Department to Contact:</label><br>
+                    <select id="contact-dept" name="department" required>
+                        <option value="">-- Select Department --</option>
+                        <option value="admissions">Admissions &amp; Enrollment</option>
+                        <option value="academics">Academic Records</option>
+                        <option value="student_affairs">Student Affairs</option>
+                        <option value="it_support">IT &amp; Portal Support</option>
+                        <option value="accounts">Accounts &amp; Fees</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="contact-message">Message / Details:</label><br>
+                    <textarea id="contact-message" name="message" rows="5" cols="45" required></textarea>
+                </p>
+
+                <p>
+                    <button type="submit">Send Inquiry</button>
+                    <button type="reset">Clear Form</button>
+                </p>
+            </form>
+        </section>
+
+        <!-- Aside Section -->
+        <aside>
+            <h2>Campus Facilities Directory</h2>
+            <ul>
+                <li><strong>Examination Wing:</strong> Ground Floor, Block A</li>
+                <li><strong>Central Library:</strong> Block C, 1st &amp; 2nd Floors</li>
+                <li><strong>Computer Centre:</strong> Block B, 3rd Floor</li>
+                <li><strong>Health Centre:</strong> Near Sports Complex</li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <nav aria-label="Footer Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="admin.html">Admin Portal</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 StudentHub. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/theme.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/notification.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

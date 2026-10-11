@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub — Events</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/interactive.css">
+    <link rel="stylesheet" href="css/data-components.css">
+</head>
+
+<body>
+
+    <!-- Top Notification Banner -->
+    <div id="notification-banner" class="notification-banner">
+        <span>🔔 <strong>Notice:</strong> Event slots fill quickly! Click "Quick Register" to reserve your spot.</span>
+        <button id="notification-close-btn" class="notification-close" type="button"
+            aria-label="Dismiss Announcement">&times;</button>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="header-brand">
+                <h1>StudentHub</h1>
+                <p>Your College Student Portal</p>
+            </div>
+            <div class="header-nav-wrapper">
+                <nav aria-label="Main Navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button id="theme-toggle-btn" class="theme-toggle-btn" type="button" aria-label="Toggle Theme">🌙
+                        Dark</button>
+                    <button id="hamburger-btn" class="hamburger-btn" type="button" aria-label="Toggle Navigation Menu"
+                        aria-expanded="false">☰ Menu</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Title and Search/Filter/Sort Section -->
+        <section>
+            <h2>Campus Events &amp; Activities</h2>
+            <p>Explore upcoming workshops, cultural festivals, tech contests, and sports events.</p>
+
+            <!-- Dynamic Search, Filter & Sort Toolbar -->
+            <div class="data-toolbar" role="search" aria-label="Events Filter and Search">
+                <div class="toolbar-group">
+                    <label for="event-search">Search Events:</label>
+                    <input type="search" id="event-search" placeholder="Search by title, venue, or keyword...">
+                </div>
+
+                <div class="toolbar-group">
+                    <label for="event-category">Filter by Category:</label>
+                    <select id="event-category">
+                        <option value="">All Categories</option>
+                        <option value="technical">Technical</option>
+                        <option value="cultural">Cultural</option>
+                        <option value="workshop">Workshop</option>
+                        <option value="sports">Sports</option>
+                        <option value="seminar">Seminar</option>
+                    </select>
+                </div>
+
+                <div class="toolbar-group">
+                    <label for="event-sort">Sort By:</label>
+                    <select id="event-sort">
+                        <option value="date-asc">Date (Earliest First)</option>
+                        <option value="date-desc">Date (Furthest First)</option>
+                        <option value="title-asc">Title (A to Z)</option>
+                        <option value="title-desc">Title (Z to A)</option>
+                    </select>
+                </div>
+
+                <button type="button" id="event-reset-btn" class="reset-btn">Reset Filters</button>
+            </div>
+        </section>
+
+        <!-- Events List Section -->
+        <section>
+            <h2>Upcoming Events</h2>
+
+            <!-- Loading State -->
+            <div id="events-loading" class="data-loading" aria-live="polite">
+                <span class="data-spinner" aria-hidden="true"></span>
+                <span>Loading upcoming events from server...</span>
+            </div>
+
+            <!-- Error State -->
+            <div id="events-error" class="data-error" style="display: none;" role="alert">
+                <p>⚠️ <span class="error-message">Unable to load events data.</span></p>
+                <button type="button" id="events-retry-btn">Try Again</button>
+            </div>
+
+            <!-- Dynamic Events Container -->
+            <div id="events-container" class="cards-grid" aria-live="polite">
+                <!-- Dynamically populated via Fetch API from data/events.json -->
+            </div>
+
+            <!-- Pagination Bar -->
+            <div id="events-pagination" class="pagination-container" style="display: none;">
+                <div id="events-pagination-info" class="pagination-info"></div>
+                <nav id="events-pagination-nav" class="pagination-nav" aria-label="Events pagination navigation"></nav>
+            </div>
+        </section>
+
+        <!-- Aside Section -->
+        <aside>
+            <h2>Event Participation Guidelines</h2>
+            <ul>
+                <li>All participants must carry a valid College Student ID card.</li>
+                <li>Attendance credit is granted for official college-sanctioned events.</li>
+                <li>Digital participation certificates will be awarded to registered participants.</li>
+                <li>For organizing new club events, contact the <a href="contact.html">Student Affairs Office</a>.</li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- Modal Popup Component -->
+    <div id="modal-backdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal-window">
+            <div class="modal-header">
+                <h3 id="modal-title">Event Registration</h3>
+                <button class="modal-close-btn" type="button" aria-label="Close dialog">&times;</button>
+            </div>
+            <p id="modal-description">Please enter your student roll number to register.</p>
+            <form id="modal-form" action="#" method="post">
+                <p>
+                    <label for="modal-roll">Student Roll Number:</label>
+                    <input type="text" id="modal-roll" name="modal_roll" required placeholder="e.g. 2026-CS-042">
+                </p>
+                <p>
+                    <label for="modal-email">Confirmation Email:</label>
+                    <input type="email" id="modal-email" name="modal_email" required
+                        placeholder="student@studenthub.edu">
+                </p>
+                <p>
+                    <button type="submit">Submit Registration</button>
+                    <button id="modal-cancel-btn" type="button" class="modal-close-btn">Cancel</button>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <nav aria-label="Footer Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="admin.html">Admin Portal</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 StudentHub. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/theme.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/notification.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/events.js"></script>
+</body>
+
+</html>

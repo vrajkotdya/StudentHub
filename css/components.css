@@ -1,0 +1,231 @@
+/* ==========================================================================
+   StudentHub — Components Stylesheet (css/components.css)
+   Buttons, Forms, Cards, Articles, Tables, and Alerts
+   ========================================================================== */
+
+/* Buttons */
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #0d6efd;
+    border: 1px solid #0d6efd;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+button[type="reset"],
+input[type="reset"] {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+button[type="reset"]:hover,
+input[type="reset"]:hover {
+    background-color: #5c636a;
+    border-color: #565e64;
+}
+
+/* Forms & Inputs */
+form {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+form p {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 0.35rem;
+    color: #2d3748;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="search"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.55rem 0.75rem;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: #333333;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="search"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+}
+
+fieldset {
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    background-color: #f8fafc;
+}
+
+legend {
+    font-weight: bold;
+    color: #2d3748;
+    padding: 0 0.5rem;
+}
+
+fieldset label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-weight: normal;
+    margin-right: 1.25rem;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    cursor: pointer;
+    margin-right: 0.35rem;
+}
+
+/* Cards & Articles */
+article {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 1.25rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+article h3 {
+    color: #1a365d;
+    margin-top: 0;
+    margin-bottom: 0.35rem;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+}
+
+caption {
+    font-weight: bold;
+    text-align: left;
+    padding: 0.5rem 0;
+    color: #475569;
+}
+
+th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border: 1px solid #e2e8f0;
+    font-size: 0.95rem;
+}
+
+th {
+    background-color: #f1f5f9;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+/* Server Alerts & Feedback Boxes */
+.alert-box {
+    padding: 1rem 1.25rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.alert-success {
+    background-color: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    color: #065f46;
+}
+
+.alert-error {
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+}
+
+.alert-box ul {
+    margin: 0.5rem 0 0.25rem 1.25rem;
+    padding: 0;
+}
+
+.alert-box li {
+    margin-bottom: 0.25rem;
+}
+
+/* Confirmation Details Card */
+.confirmation-card {
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.confirmation-card table {
+    margin-top: 0.75rem;
+    background-color: #ffffff;
+}
+
+.confirmation-card th {
+    width: 30%;
+    background-color: #f1f5f9;
+}
+
+.btn-secondary {
+    background-color: #64748b;
+    border-color: #64748b;
+}
+
+.btn-secondary:hover {
+    background-color: #475569;
+    border-color: #334155;
+}

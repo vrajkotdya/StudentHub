@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub — Student Dashboard</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/interactive.css">
+</head>
+<body>
+
+    <!-- Top Notification Banner -->
+    <div id="notification-banner" class="notification-banner">
+        <span>🔔 <strong>Notice:</strong> Project synopsis submission is due this Friday by 5:00 PM!</span>
+        <button id="notification-close-btn" class="notification-close" type="button" aria-label="Dismiss Announcement">&times;</button>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="header-brand">
+                <h1>StudentHub</h1>
+                <p>Student Portal Dashboard</p>
+            </div>
+            <div class="header-nav-wrapper">
+                <nav aria-label="Student Portal Navigation">
+                    <ul>
+                        <li><a href="index.html">Portal Home</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="profile.html">My Profile</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="login.html">Log Out</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button id="theme-toggle-btn" class="theme-toggle-btn" type="button" aria-label="Toggle Theme">🌙 Dark</button>
+                    <button id="hamburger-btn" class="hamburger-btn" type="button" aria-label="Toggle Navigation Menu" aria-expanded="false">☰ Menu</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Student Welcome Section -->
+        <section>
+            <h2>Welcome back, Alex Johnson!</h2>
+            <p><strong>Roll Number:</strong> 2026-CS-042 | <strong>Department:</strong> Computer Science &amp; Engineering | <strong>Semester:</strong> 6th</p>
+            <p><a href="profile.html">View &amp; Edit Full Profile</a></p>
+        </section>
+
+        <!-- Academic Summary Section -->
+        <section>
+            <h2>Academic Summary</h2>
+            <div class="table-container">
+                <table border="1">
+                    <caption>Current Semester Enrolled Subjects</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Subject Code</th>
+                            <th scope="col">Subject Name</th>
+                            <th scope="col">Credits</th>
+                            <th scope="col">Attendance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CS601</td>
+                            <td>Web Development &amp; Technologies</td>
+                            <td>4</td>
+                            <td>92%</td>
+                        </tr>
+                        <tr>
+                            <td>CS602</td>
+                            <td>Database Management Systems</td>
+                            <td>4</td>
+                            <td>88%</td>
+                        </tr>
+                        <tr>
+                            <td>CS603</td>
+                            <td>Computer Networks</td>
+                            <td>3</td>
+                            <td>85%</td>
+                        </tr>
+                        <tr>
+                            <td>CS604</td>
+                            <td>Software Engineering Principles</td>
+                            <td>3</td>
+                            <td>90%</td>
+                        </tr>
+                        <tr>
+                            <td>CS605</td>
+                            <td>Web Technologies Laboratory</td>
+                            <td>2</td>
+                            <td>95%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p><strong>Overall Semester Attendance:</strong> 90% (Good Standing)</p>
+        </section>
+
+        <!-- Registered Events Section -->
+        <section>
+            <h2>My Registered Events</h2>
+
+            <div class="cards-grid">
+                <article>
+                    <h3>Web Development Hackathon 2026</h3>
+                    <p><strong>Date:</strong> September 20, 2026 | <strong>Time:</strong> 9:00 AM &ndash; 5:00 PM</p>
+                    <p><strong>Venue:</strong> Computer Science Lab 3 | <strong>Status:</strong> Confirmed</p>
+                    <p>Prepare your development environment. Team rosters will be shared two days prior to the event.</p>
+                </article>
+
+                <article>
+                    <h3>Annual Sports Meet &mdash; Badminton Singles</h3>
+                    <p><strong>Date:</strong> October 05, 2026 | <strong>Time:</strong> 10:00 AM</p>
+                    <p><strong>Venue:</strong> Indoor Sports Complex | <strong>Status:</strong> Confirmed</p>
+                </article>
+            </div>
+
+            <p style="margin-top: 1rem;"><a href="events.html">Browse More Upcoming Events &rarr;</a></p>
+        </section>
+
+        <!-- Announcements Section -->
+        <section>
+            <h2>Department Notices</h2>
+            <article>
+                <h3>Project Synopsis Submission Deadline</h3>
+                <p><time datetime="2026-09-14">September 14, 2026</time></p>
+                <p>Final year and 6th semester project groups must submit their approved project synopsis to their mentor by Friday, 5:00 PM.</p>
+            </article>
+        </section>
+
+        <!-- Aside Section -->
+        <aside>
+            <h2>Quick Actions</h2>
+            <ul>
+                <li><a href="profile.html">Update Contact Info</a></li>
+                <li><a href="events.html">Register for New Events</a></li>
+                <li><a href="feedback.html">Submit Facility Feedback</a></li>
+                <li><a href="faq.html">Portal Help &amp; FAQs</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <nav aria-label="Footer Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="admin.html">Admin Portal</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 StudentHub. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/theme.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/notification.js"></script>
+</body>
+</html>

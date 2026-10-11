@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub — Login</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/interactive.css">
+</head>
+<body>
+
+    <!-- Top Notification Banner -->
+    <div id="notification-banner" class="notification-banner">
+        <span>🔔 <strong>Notice:</strong> Enter your registered credentials or select demo options below.</span>
+        <button id="notification-close-btn" class="notification-close" type="button" aria-label="Dismiss Announcement">&times;</button>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="header-brand">
+                <h1>StudentHub</h1>
+                <p>Your College Student Portal</p>
+            </div>
+            <div class="header-nav-wrapper">
+                <nav aria-label="Main Navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button id="theme-toggle-btn" class="theme-toggle-btn" type="button" aria-label="Toggle Theme">🌙 Dark</button>
+                    <button id="hamburger-btn" class="hamburger-btn" type="button" aria-label="Toggle Navigation Menu" aria-expanded="false">☰ Menu</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Login Form Section -->
+        <section class="form-container">
+            <h2>Portal Login</h2>
+            <p>Enter your credentials to access your StudentHub account.</p>
+
+            <form action="#" method="post">
+                <p>
+                    <label for="role">Login As:</label><br>
+                    <select id="role" name="role" required>
+                        <option value="student">Student</option>
+                        <option value="admin">College Administrator</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="email">Email Address or Roll Number:</label><br>
+                    <input type="text" id="email" name="email" required>
+                </p>
+
+                <p>
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password" required>
+                </p>
+
+                <p>
+                    <label for="remember">
+                        <input type="checkbox" id="remember" name="remember">
+                        Remember my login on this device
+                    </label>
+                </p>
+
+                <p>
+                    <button type="submit">Log In</button>
+                </p>
+            </form>
+
+            <p>
+                Don't have an account? <a href="register.html">Register here</a> | 
+                <a href="dashboard.html">Demo Student Dashboard</a> | 
+                <a href="admin.html">Demo Admin Dashboard</a>
+            </p>
+        </section>
+
+        <!-- Aside Section -->
+        <aside class="form-container">
+            <h2>Login Security Notice</h2>
+            <p>Never share your credentials with anyone. Log out when using shared campus lab computers.</p>
+            <p>Trouble logging in? Visit our <a href="faq.html">FAQ section</a> or <a href="contact.html">Contact Support</a>.</p>
+        </aside>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <nav aria-label="Footer Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="admin.html">Admin Portal</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 StudentHub. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/theme.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/notification.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

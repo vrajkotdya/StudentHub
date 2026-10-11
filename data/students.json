@@ -1,0 +1,119 @@
+[
+    {
+        "id": 1,
+        "rollNo": "2026-CS-042",
+        "name": "Alex Johnson",
+        "course": "B.Tech CSE",
+        "year": "3rd Year",
+        "email": "alex.johnson@studenthub.edu",
+        "status": "Active"
+    },
+    {
+        "id": 2,
+        "rollNo": "2026-IT-018",
+        "name": "Priya Sharma",
+        "course": "B.Tech IT",
+        "year": "2nd Year",
+        "email": "priya.sharma@studenthub.edu",
+        "status": "Active"
+    },
+    {
+        "id": 3,
+        "rollNo": "2026-EC-055",
+        "name": "Rohan Patel",
+        "course": "B.Tech ECE",
+        "year": "4th Year",
+        "email": "rohan.patel@studenthub.edu",
+        "status": "Active"
+    },
+    {
+        "id": 4,
+        "rollNo": "2026-BCA-009",
+        "name": "Meera Nair",
+        "course": "BCA",
+        "year": "1st Year",
+        "email": "meera.nair@studenthub.edu",
+        "status": "Active"
+    },
+    {
+        "id": 5,
+        "rollNo": "2026-CS-089",
+        "name": "Sneha Reddy",
+        "course": "B.Tech CSE",
+        "year": "2nd Year",
+        "email": "sneha.reddy@studenthub.edu",
+        "status": "Active"
+    },
+    {
+        "id": 6,
+        "rollNo": "2026-IT-034",
+        "name": "David Miller",
+        "course": "B.Tech IT",
+        "year": "3rd Year",
+        "email": "david.miller@studenthub.edu",
+        "status": "Active"
+    },
+    {
+        "id": 7,
+        "rollNo": "2026-MCA-012",
+        "name": "Ananya Roy",
+        "course": "MCA",
+        "year": "1st Year",
+        "email": "ananya.roy@studenthub.edu",
+        "status": "Active"
+    },
+    {
+        "id": 8,
+        "rollNo": "2026-CS-105",
+        "name": "Kabir Verma",
+        "course": "B.Tech CSE",
+        "year": "4th Year",
+        "email": "kabir.verma@studenthub.edu",
+        "status": "Active"
+    },
+    {
+        "id": 9,
+        "rollNo": "2026-BSC-021",
+        "name": "Tanvi Joshi",
+        "course": "B.Sc CS",
+        "year": "2nd Year",
+        "email": "tanvi.joshi@studenthub.edu",
+        "status": "Active"
+    },
+    {
+        "id": 10,
+        "rollNo": "2026-EC-072",
+        "name": "Vikram Singh",
+        "course": "B.Tech ECE",
+        "year": "3rd Year",
+        "email": "vikram.singh@studenthub.edu",
+        "status": "Active"
+    },
+    {
+        "id": 11,
+        "rollNo": "2026-BCA-033",
+        "name": "Aarav Gupta",
+        "course": "BCA",
+        "year": "3rd Year",
+        "email": "aarav.gupta@studenthub.edu",
+        "status": "Active"
+    },
+    {
+        "id": 12,
+        "rollNo": "2026-CS-015",
+        "name": "Neha Kulkarni",
+        "course": "B.Tech CSE",
+        "year": "1st Year",
+        "email": "neha.kulkarni@studenthub.edu",
+        "status": "Active"
+    },
+    {
+        "id": 13,
+        "rollNo": "2026-CSE-050",
+        "name": "Test Student",
+        "course": "B.Tech CSE",
+        "year": "1st Year",
+        "email": "test.student@studenthub.edu",
+        "status": "Active"
+    }
+]

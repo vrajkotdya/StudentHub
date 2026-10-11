@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub — Student Profile</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/interactive.css">
+</head>
+<body>
+
+    <!-- Top Notification Banner -->
+    <div id="notification-banner" class="notification-banner">
+        <span>🔔 <strong>Notice:</strong> Please ensure your contact phone and address are current for official records.</span>
+        <button id="notification-close-btn" class="notification-close" type="button" aria-label="Dismiss Announcement">&times;</button>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="header-brand">
+                <h1>StudentHub</h1>
+                <p>Student Portal Dashboard</p>
+            </div>
+            <div class="header-nav-wrapper">
+                <nav aria-label="Student Portal Navigation">
+                    <ul>
+                        <li><a href="index.html">Portal Home</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="profile.html">My Profile</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="login.html">Log Out</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button id="theme-toggle-btn" class="theme-toggle-btn" type="button" aria-label="Toggle Theme">🌙 Dark</button>
+                    <button id="hamburger-btn" class="hamburger-btn" type="button" aria-label="Toggle Navigation Menu" aria-expanded="false">☰ Menu</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Profile Overview Section -->
+        <section>
+            <h2>Student Profile Information</h2>
+            
+            <h3>Personal Information</h3>
+            <p><strong>Full Name:</strong> Alex Johnson</p>
+            <p><strong>Roll Number:</strong> 2026-CS-042</p>
+            <p><strong>Date of Birth:</strong> May 15, 2004</p>
+            <p><strong>Gender:</strong> Male</p>
+            <p><strong>Blood Group:</strong> O+</p>
+
+            <h3>Academic Information</h3>
+            <p><strong>Degree / Course:</strong> B.Tech - Computer Science &amp; Engineering</p>
+            <p><strong>Academic Year:</strong> 3rd Year (Semester 6)</p>
+            <p><strong>College Email:</strong> alex.johnson@studenthub.edu</p>
+            <p><strong>Current CGPA:</strong> 8.75 / 10.0</p>
+        </section>
+
+        <!-- Edit Profile Form Section -->
+        <section>
+            <h2>Update Contact Information</h2>
+            <p>You can modify your personal contact phone number, alternate email, and residential address below.</p>
+
+            <form action="#" method="post">
+                <div class="form-row">
+                    <div>
+                        <label for="profile-phone">Mobile Phone Number:</label><br>
+                        <input type="tel" id="profile-phone" name="phone" value="+91 98765 12345" required>
+                    </div>
+
+                    <div>
+                        <label for="alt-email">Personal / Alternate Email:</label><br>
+                        <input type="email" id="alt-email" name="alt_email" value="alex.personal@example.com" required>
+                    </div>
+                </div>
+
+                <p>
+                    <label for="address">Current Residential Address:</label><br>
+                    <textarea id="address" name="address" rows="3" cols="40" required>Flat 402, Green Valley Apartments, College Road, Cityville - 560001</textarea>
+                </p>
+
+                <p>
+                    <label for="emergency-contact">Emergency Contact Name &amp; Phone:</label><br>
+                    <input type="text" id="emergency-contact" name="emergency_contact" value="Robert Johnson (+91 98765 54321)" required>
+                </p>
+
+                <p>
+                    <button type="submit">Save Profile Changes</button>
+                    <button type="reset">Cancel</button>
+                </p>
+            </form>
+        </section>
+
+        <!-- Aside Section -->
+        <aside>
+            <h2>Academic Mentor</h2>
+            <p><strong>Faculty Mentor:</strong> Prof. Karen Williams</p>
+            <p><strong>Department:</strong> Computer Science &amp; Engineering</p>
+            <p><strong>Office:</strong> Block B, Room 108</p>
+            <p><strong>Email:</strong> k.williams@studenthub.edu</p>
+            <p><a href="contact.html">Need help with profile changes? Contact Admin</a></p>
+        </aside>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <nav aria-label="Footer Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="admin.html">Admin Portal</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 StudentHub. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/theme.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/notification.js"></script>
+</body>
+</html>

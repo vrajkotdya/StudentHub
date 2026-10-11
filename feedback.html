@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub — Student Feedback</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/interactive.css">
+</head>
+<body>
+
+    <!-- Top Notification Banner -->
+    <div id="notification-banner" class="notification-banner">
+        <span>🔔 <strong>Notice:</strong> Your feedback is reviewed directly by the College Quality Assurance Cell.</span>
+        <button id="notification-close-btn" class="notification-close" type="button" aria-label="Dismiss Announcement">&times;</button>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="header-brand">
+                <h1>StudentHub</h1>
+                <p>Your College Student Portal</p>
+            </div>
+            <div class="header-nav-wrapper">
+                <nav aria-label="Main Navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button id="theme-toggle-btn" class="theme-toggle-btn" type="button" aria-label="Toggle Theme">🌙 Dark</button>
+                    <button id="hamburger-btn" class="hamburger-btn" type="button" aria-label="Toggle Navigation Menu" aria-expanded="false">☰ Menu</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Feedback Form Section -->
+        <section class="form-container">
+            <h2>Student Feedback &amp; Suggestions</h2>
+            <p>Your feedback helps improve campus facilities, academic support, and portal features. Please share your honest experience.</p>
+
+            <form action="process_feedback.php" method="post">
+                <div class="form-row">
+                    <div>
+                        <label for="feedback-name">Your Full Name:</label><br>
+                        <input type="text" id="feedback-name" name="student_name" required>
+                    </div>
+
+                    <div>
+                        <label for="feedback-roll">Roll / Registration Number:</label><br>
+                        <input type="text" id="feedback-roll" name="roll_number" required>
+                    </div>
+                </div>
+
+                <p>
+                    <label for="feedback-category">Feedback Area / Category:</label><br>
+                    <select id="feedback-category" name="category" required>
+                        <option value="">-- Choose Category --</option>
+                        <option value="portal">StudentHub Web Portal</option>
+                        <option value="academics">Academic Curriculum &amp; Teaching</option>
+                        <option value="library">Library Resources &amp; Facilities</option>
+                        <option value="labs">Computer Labs &amp; Workshops</option>
+                        <option value="campus">Campus Infrastructure &amp; Canteen</option>
+                    </select>
+                </p>
+
+                <fieldset>
+                    <legend>Overall Satisfaction Rating</legend>
+                    <label for="rating-5">
+                        <input type="radio" id="rating-5" name="rating" value="5" required> 5 &ndash; Excellent
+                    </label>
+                    <label for="rating-4">
+                        <input type="radio" id="rating-4" name="rating" value="4"> 4 &ndash; Very Good
+                    </label>
+                    <label for="rating-3">
+                        <input type="radio" id="rating-3" name="rating" value="3"> 3 &ndash; Satisfactory
+                    </label>
+                    <label for="rating-2">
+                        <input type="radio" id="rating-2" name="rating" value="2"> 2 &ndash; Needs Improvement
+                    </label>
+                    <label for="rating-1">
+                        <input type="radio" id="rating-1" name="rating" value="1"> 1 &ndash; Poor
+                    </label>
+                </fieldset>
+
+                <p>
+                    <label for="feedback-comments">Detailed Comments &amp; Suggestions:</label><br>
+                    <textarea id="feedback-comments" name="comments" rows="5" cols="45" placeholder="Share your suggestions or specific issues..." required></textarea>
+                </p>
+
+                <p>
+                    <button type="submit">Submit Feedback</button>
+                    <button type="reset">Clear Form</button>
+                </p>
+            </form>
+        </section>
+
+        <!-- Aside Section -->
+        <aside class="form-container">
+            <h2>Confidentiality &amp; Review Policy</h2>
+            <p>Feedback submitted through this portal is reviewed by the College Internal Quality Assurance Cell (IQAC).</p>
+            <p>All constructive suggestions are taken seriously to improve academic experience and student life.</p>
+            <p>For urgent academic grievances, please consult your <a href="about.html">Department Mentor</a>.</p>
+        </aside>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <nav aria-label="Footer Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="admin.html">Admin Portal</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 StudentHub. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/theme.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/notification.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

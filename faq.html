@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub — FAQ</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/interactive.css">
+    <link rel="stylesheet" href="css/data-components.css">
+</head>
+<body>
+
+    <!-- Top Notification Banner -->
+    <div id="notification-banner" class="notification-banner">
+        <span>🔔 <strong>Notice:</strong> Have a question not answered below? Submit an inquiry via Contact Us.</span>
+        <button id="notification-close-btn" class="notification-close" type="button" aria-label="Dismiss Announcement">&times;</button>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="header-brand">
+                <h1>StudentHub</h1>
+                <p>Your College Student Portal</p>
+            </div>
+            <div class="header-nav-wrapper">
+                <nav aria-label="Main Navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button id="theme-toggle-btn" class="theme-toggle-btn" type="button" aria-label="Toggle Theme">🌙 Dark</button>
+                    <button id="hamburger-btn" class="hamburger-btn" type="button" aria-label="Toggle Navigation Menu" aria-expanded="false">☰ Menu</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Overview & Filter Section -->
+        <section>
+            <h2>Frequently Asked Questions</h2>
+            <p>Search questions or filter by category. Click any question below to expand or collapse answers.</p>
+
+            <!-- FAQ Search Bar -->
+            <div class="data-toolbar" role="search" aria-label="FAQ Search">
+                <div class="toolbar-group" style="flex: 1 1 300px;">
+                    <label for="faq-search">Search Questions:</label>
+                    <input type="search" id="faq-search" placeholder="Type a keyword, topic, or question...">
+                </div>
+                <button type="button" id="faq-reset-btn" class="reset-btn">Clear Search</button>
+            </div>
+
+            <!-- Category Filter Pills -->
+            <div id="faq-category-filters" class="category-filter-bar" role="group" aria-label="FAQ Categories">
+                <button type="button" class="category-pill-btn active" data-category="">All Categories</button>
+                <button type="button" class="category-pill-btn" data-category="general">General</button>
+                <button type="button" class="category-pill-btn" data-category="academic">Academics</button>
+                <button type="button" class="category-pill-btn" data-category="events">Campus Events</button>
+                <button type="button" class="category-pill-btn" data-category="support">Support</button>
+            </div>
+        </section>
+
+        <!-- Dynamic FAQs Section -->
+        <section>
+            <!-- Loading State -->
+            <div id="faq-loading" class="data-loading" aria-live="polite">
+                <span class="data-spinner" aria-hidden="true"></span>
+                <span>Loading FAQs from server...</span>
+            </div>
+
+            <!-- Error State -->
+            <div id="faq-error" class="data-error" style="display: none;" role="alert">
+                <p>⚠️ <span class="error-message">Unable to load FAQ data.</span></p>
+                <button type="button" id="faq-retry-btn">Try Again</button>
+            </div>
+
+            <!-- Dynamic FAQs Container -->
+            <div id="faq-container" aria-live="polite">
+                <!-- Dynamically populated via Fetch API from data/faqs.json -->
+            </div>
+        </section>
+
+        <!-- Aside Section -->
+        <aside>
+            <h2>Still Need Assistance?</h2>
+            <p>If your question isn't answered here, please reach out to our team:</p>
+            <ul>
+                <li><a href="contact.html">Contact College Support</a></li>
+                <li><a href="feedback.html">Submit Feedback or Suggestions</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <nav aria-label="Footer Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="admin.html">Admin Portal</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 StudentHub. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/theme.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/notification.js"></script>
+    <script src="js/faq.js"></script>
+</body>
+</html>

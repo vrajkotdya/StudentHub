@@ -1,0 +1,149 @@
+/* ==========================================================================
+   StudentHub — Layout Stylesheet (css/layout.css)
+   Header, Navigation (Flexbox), Main Container, Aside, and Footer
+   ========================================================================== */
+
+/* Header Area */
+header {
+    background-color: #1a365d;
+    color: #ffffff;
+    padding: 0.85rem 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.header-brand h1 {
+    color: #ffffff;
+    font-size: 1.6rem;
+    margin-bottom: 0.1rem;
+    line-height: 1.2;
+}
+
+.header-brand h1 a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header-brand p {
+    color: #cbd5e1;
+    font-size: 0.85rem;
+    margin-bottom: 0;
+}
+
+.header-nav-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* Navigation Bar */
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    display: inline-block;
+    color: #ffffff;
+    padding: 0.35rem 0.65rem;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.12);
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+header nav a:hover {
+    background-color: #0d6efd;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+/* Main Content Container */
+main {
+    flex: 1;
+    max-width: 1000px;
+    width: 100%;
+    margin: 1.5rem auto;
+    padding: 0 1.25rem;
+}
+
+/* Layout Sections & Panels */
+section {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Aside / Sidebar Panel */
+aside {
+    background-color: #eef2f6;
+    border-left: 4px solid #1a365d;
+    border-radius: 4px;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+aside h2 {
+    border-bottom: 1px solid #cbd5e1;
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+/* Footer */
+footer {
+    background-color: #1e293b;
+    color: #94a3b8;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer nav {
+    margin-bottom: 1rem;
+}
+
+footer nav ul {
+    justify-content: center;
+}
+
+footer nav a {
+    color: #cbd5e1;
+    font-size: 0.85rem;
+    padding: 0.2rem 0.5rem;
+}
+
+footer nav a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+footer p {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+}
