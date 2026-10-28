@@ -1,0 +1,197 @@
+/* ==========================================================================
+   StudentHub — Responsive Stylesheet (css/responsive.css)
+   Mobile-First Media Queries, CSS Grid, Flexbox Layouts, and Fluid Elements
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Fluid Elements & Overflow Prevention (Mobile Default)
+   -------------------------------------------------------------------------- */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+img, video, iframe, canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Table Wrapper */
+.table-container,
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+}
+
+.table-container table,
+.table-responsive table {
+    margin: 0;
+    border: none;
+    min-width: 500px; /* Ensures table columns don't crunch awkwardly on small screens */
+}
+
+/* --------------------------------------------------------------------------
+   2. Responsive Navigation & Header (Mobile-First)
+   -------------------------------------------------------------------------- */
+header {
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+header p {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+header nav a {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.82rem;
+}
+
+/* --------------------------------------------------------------------------
+   3. Responsive Cards Grid (CSS Grid)
+   -------------------------------------------------------------------------- */
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cards-grid article {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* --------------------------------------------------------------------------
+   4. Responsive Forms (Mobile-First)
+   -------------------------------------------------------------------------- */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.filter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.filter-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-form button {
+    width: 100%;
+    margin-right: 0;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+/* --------------------------------------------------------------------------
+   5. Tablet Breakpoint (min-width: 768px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+    header {
+        padding: 1.25rem 1.75rem;
+    }
+
+    header h1 {
+        font-size: 1.75rem;
+    }
+
+    header nav a {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    main {
+        padding: 0 1.5rem;
+        margin: 2rem auto;
+    }
+
+    /* 2-Column Cards Grid on Tablets */
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    /* Inline Filter Form on Tablets */
+    .filter-form {
+        flex-direction: row;
+        align-items: flex-end;
+        flex-wrap: wrap;
+    }
+
+    .filter-form .form-group {
+        flex: 1 1 200px;
+    }
+
+    .filter-form button {
+        width: auto;
+        align-self: flex-end;
+        margin-bottom: 0;
+    }
+
+    /* Multi-column Form Rows */
+    .form-row {
+        flex-direction: row;
+    }
+
+    .form-row > * {
+        flex: 1;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   6. Desktop Breakpoint (min-width: 1024px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1024px) {
+    header {
+        padding: 0.85rem 2rem;
+    }
+
+    .header-brand h1 {
+        font-size: 1.8rem;
+    }
+
+    header nav ul {
+        gap: 0.5rem;
+    }
+
+    /* Two-column layout when main has aside */
+    .has-sidebar {
+        display: grid;
+        grid-template-columns: 2.6fr 1fr;
+        gap: 1.75rem;
+        align-items: start;
+    }
+
+    /* 3-Column Cards Grid for wide desktops where suitable */
+    .cards-grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

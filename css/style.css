@@ -1,0 +1,14 @@
+/* ==========================================================================
+   StudentHub — Master Stylesheet (css/style.css)
+   Modular CSS Architecture importing Base, Layout, Components, Responsive,
+   Theme, and Interactive modules.
+   ========================================================================== */
+
+@import url("base.css");
+@import url("layout.css");
+@import url("components.css");
+@import url("responsive.css");
+@import url("theme.css");
+@import url("interactive.css");
+@import url("validation.css");
+@import url("data-components.css");

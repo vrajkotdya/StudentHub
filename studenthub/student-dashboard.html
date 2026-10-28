@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personalized Student Dashboard for CHARUSAT StudentHub portal.">
+  <title>Student Dashboard | StudentHub</title>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header role="banner">
+    <div>
+      <p><strong>CHAROTAR UNIVERSITY OF SCIENCE AND TECHNOLOGY (CHARUSAT)</strong></p>
+      <h1>StudentHub &mdash; Student Portal</h1>
+      <p>Logged in as: <strong>Alex Patel (24CE042)</strong> &bull; Semester 3 (B.Tech CE)</p>
+    </div>
+
+    <!-- Student Authenticated Navigation -->
+    <nav role="navigation" aria-label="Student Navigation">
+      <ul>
+        <li><a href="student-dashboard.html" aria-current="page"><strong>Dashboard</strong></a></li>
+        <li><a href="student-profile.html">My Profile &amp; ID</a></li>
+        <li><a href="events.html">Browse Events</a></li>
+        <li><a href="feedback.html">Give Feedback</a></li>
+        <li><a href="contact.html">Helpdesk</a></li>
+        <li><a href="login.html"><strong>Log Out</strong></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <hr>
+
+  <nav aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html">Home</a> &gt;</li>
+      <li><a href="student-dashboard.html">Student Portal</a> &gt;</li>
+      <li aria-current="page"><strong>Dashboard Overview</strong></li>
+    </ol>
+  </nav>
+
+  <hr>
+
+  <main id="main-content" role="main">
+
+    <!-- Welcome Section -->
+    <section aria-labelledby="welcome-title">
+      <h2 id="welcome-title">Academic Overview &bull; Semester 3 (2026-27)</h2>
+      <p>
+        Welcome back, Alex. Check your active event registrations, review the mid-semester examination timetable, and track departmental circulars.
+      </p>
+
+      <!-- Metric Highlights -->
+      <table border="1" cellpadding="8" cellspacing="0" summary="Summary metrics of academic status and participation">
+        <caption style="text-align:left; font-weight:bold; margin-bottom:6px;">Current Academic Summary</caption>
+        <thead>
+          <tr>
+            <th scope="col">Metric</th>
+            <th scope="col">Status / Count</th>
+            <th scope="col">Remarks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Registered Events</th>
+            <td><strong>2 Active Events</strong></td>
+            <td>HackCHARUSAT 2026, Web Frameworks Workshop</td>
+          </tr>
+          <tr>
+            <th scope="row">Current Attendance</th>
+            <td><strong>89.4%</strong></td>
+            <td>Satisfies minimum 80% criteria</td>
+          </tr>
+          <tr>
+            <th scope="row">Unread Department Notices</th>
+            <td><strong>1 New Notice</strong></td>
+            <td>Practical Lab Submissions Guidelines</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+
+    <!-- My Registered Events Table -->
+    <section aria-labelledby="my-events-title">
+      <h3 id="my-events-title">Your Confirmed Event Registrations</h3>
+
+      <table border="1" cellpadding="8" cellspacing="0" summary="List of events the logged-in student has registered for">
+        <thead>
+          <tr>
+            <th scope="col">Event Title</th>
+            <th scope="col">Date</th>
+            <th scope="col">Venue</th>
+            <th scope="col">Team / Role</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">HackCHARUSAT 2026</th>
+            <td><time datetime="2026-10-12">Oct 12-13, 2026</time></td>
+            <td>Central Computing Center</td>
+            <td>Team Lead (Team CodeCrafters)</td>
+            <td>Confirmed</td>
+          </tr>
+          <tr>
+            <th scope="row">Hands-on Web Frameworks Workshop</th>
+            <td><time datetime="2026-10-24">Oct 24, 2026</time></td>
+            <td>CSPIT Lab 302</td>
+            <td>Individual Attendee</td>
+            <td>Confirmed</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><a href="events.html">&rarr; Explore More Campus Events</a></p>
+    </section>
+
+    <hr>
+
+    <!-- Department Circulars -->
+    <section id="notices" aria-labelledby="notices-heading">
+      <h3 id="notices-heading">Departmental Notices for 3rd Sem B.Tech CE</h3>
+
+      <article>
+        <h4>Lab File Submission Schedule for ITUE203 (Web Development Frameworks)</h4>
+        <p><small>Issued by: <strong>Course Coordinators</strong> &bull; Date: <time datetime="2026-09-12">September 12, 2026</time></small></p>
+        <p>All students must complete Practical 1 and Practical 2 submissions on GitHub with tagged releases before next week's laboratory evaluation.</p>
+      </article>
+
+      <article>
+        <h4>Mid-Sem Theory Schedule Notice</h4>
+        <p><small>Issued by: <strong>CSPIT Exam Cell</strong> &bull; Date: <time datetime="2026-09-10">September 10, 2026</time></small></p>
+        <p>Mid-Semester Theory exams commence from October 19, 2026. Hall tickets will be issued digitally through StudentHub.</p>
+      </article>
+    </section>
+
+    <hr>
+
+    <aside aria-labelledby="mentor-info">
+      <h3 id="mentor-info">Your Faculty Counselor</h3>
+      <p>
+        <strong>Faculty Counselor:</strong> Dr. Martin Parmar<br>
+        <strong>Office:</strong> Room 312, CSPIT-CE<br>
+        <strong>Email:</strong> martinparmar.ce@charusat.ac.in<br>
+        <strong>Counseling Hours:</strong> Wednesday &amp; Friday (3:30 PM &ndash; 4:30 PM)
+      </p>
+    </aside>
+
+  </main>
+
+  <hr>
+
+  <footer role="contentinfo">
+    <p>&copy; 2026-27 StudentHub &bull; Faculty of Technology and Engineering (FTE)</p>
+    <p>Charotar University of Science and Technology (CHARUSAT), Changa, Gujarat, India - 388421</p>
+    <nav aria-label="Footer Quick Links">
+      <ul>
+        <li><a href="index.html">Public Home</a></li>
+        <li><a href="student-dashboard.html">Dashboard</a></li>
+        <li><a href="student-profile.html">Profile</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="contact.html">Helpdesk</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+</body>
+</html>

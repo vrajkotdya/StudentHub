@@ -1,0 +1,97 @@
+/* ==========================================================================
+   StudentHub — Base Stylesheet (css/base.css)
+   Typography, Resets, Base Colors, and Global Spacing
+   ========================================================================== */
+
+/* Box Sizing Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Global Body Styling */
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #1e293b;
+    background-color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Typography & Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #1a365d;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.3rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-top: 0.75rem;
+}
+
+p {
+    margin-bottom: 0.75rem;
+}
+
+time {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+small {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+address {
+    font-style: normal;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0a58ca;
+    text-decoration: underline;
+}
+
+/* Unordered & Ordered Lists */
+ul, ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.3rem;
+}
+
+/* Horizontal Rule Divider */
+hr {
+    border: none;
+    border-top: 1px solid #e2e8f0;
+    margin: 1.5rem 0;
+}

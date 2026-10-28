@@ -1,0 +1,314 @@
+/* ==========================================================================
+   StudentHub — Components Stylesheet (css/components.css)
+   Buttons, Forms, Cards, Articles, Tables, and Alerts
+   ========================================================================== */
+
+/* Hero Banner for Public Pages */
+.hero-banner-public {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: #ffffff;
+    padding: 2.25rem 2rem;
+    border-radius: 14px;
+    margin-bottom: 1.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.hero-banner-public .badge-pill {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background-color: rgba(37, 99, 235, 0.25);
+    color: #60a5fa;
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    border-radius: 9999px;
+    margin-bottom: 0.65rem;
+}
+
+/* Stat Cards Grid */
+.stat-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin: 1.25rem 0;
+}
+
+.stat-card-simple {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 1.25rem;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card-simple:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card-simple .stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #2563eb;
+    line-height: 1.1;
+    margin-bottom: 0.25rem;
+}
+
+.stat-card-simple .stat-label {
+    font-size: 0.825rem;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+body.dark-theme .stat-card-simple {
+    background-color: #0f172a;
+    border-color: #334155;
+}
+
+body.dark-theme .stat-card-simple .stat-number {
+    color: #38bdf8;
+}
+
+body.dark-theme .stat-card-simple .stat-label {
+    color: #94a3b8;
+}
+
+.hero-banner-public h2 {
+    color: #ffffff;
+    font-size: 1.85rem;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.hero-banner-public p {
+    color: #cbd5e1;
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Buttons */
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+    display: inline-block;
+    padding: 0.6rem 1.35rem;
+    font-size: 0.925rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #2563eb;
+    border: 1px solid #2563eb;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+    transition: all 0.2s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.25);
+}
+
+button.btn-secondary {
+    background-color: transparent;
+    color: #475569;
+    border: 1.5px solid #cbd5e1;
+    box-shadow: none;
+}
+
+button.btn-secondary:hover {
+    background-color: #f1f5f9;
+    color: #0f172a;
+    border-color: #94a3b8;
+}
+
+body.dark-theme button.btn-secondary {
+    color: #cbd5e1;
+    border-color: #475569;
+}
+
+body.dark-theme button.btn-secondary:hover {
+    background-color: #334155;
+    color: #ffffff;
+}
+
+/* Forms & Inputs */
+form {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+form p {
+    margin-bottom: 1.15rem;
+}
+
+label {
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+    color: #1e293b;
+    font-size: 0.9rem;
+}
+
+body.dark-theme label {
+    color: #e2e8f0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="search"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.65rem 0.9rem;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: #1e293b;
+    background-color: #ffffff;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+body.dark-theme input[type="text"],
+body.dark-theme input[type="email"],
+body.dark-theme input[type="password"],
+body.dark-theme input[type="tel"],
+body.dark-theme input[type="search"],
+body.dark-theme select,
+body.dark-theme textarea {
+    background-color: #0f172a;
+    border-color: #475569;
+    color: #f1f5f9;
+}
+
+/* Articles & Cards in Grid */
+article {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+body.dark-theme article {
+    background-color: #1e293b;
+    border-color: #334155;
+    color: #f1f5f9;
+}
+
+article h3 {
+    color: #0f172a;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+body.dark-theme article h3 {
+    color: #ffffff;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+body.dark-theme table {
+    background-color: #1e293b;
+    border-color: #334155;
+}
+
+th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border: 1px solid #e2e8f0;
+    font-size: 0.9rem;
+}
+
+body.dark-theme th, body.dark-theme td {
+    border-color: #334155;
+}
+
+th {
+    background-color: #f8fafc;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+body.dark-theme th {
+    background-color: #0f172a;
+    color: #f1f5f9;
+}
+
+tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+body.dark-theme tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+/* Alerts */
+.alert-box {
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.alert-success {
+    background-color: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    color: #065f46;
+}
+
+.alert-error {
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+}

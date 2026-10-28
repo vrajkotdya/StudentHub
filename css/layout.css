@@ -1,0 +1,210 @@
+/* ==========================================================================
+   StudentHub — Layout Stylesheet (css/layout.css)
+   Header, Navigation (Flexbox), Main Container, Aside, and Footer
+   ========================================================================== */
+
+/* Header Area */
+header {
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 0.9rem 1.5rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.header-brand h1 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin: 0;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.header-brand h1 a {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.header-brand p {
+    color: #94a3b8;
+    font-size: 0.8rem;
+    margin: 0.15rem 0 0 0;
+    letter-spacing: 0.2px;
+}
+
+.header-nav-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* Navigation Bar */
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    display: inline-block;
+    color: #94a3b8;
+    padding: 0.42rem 0.9rem;
+    border-radius: 9999px;
+    background-color: transparent;
+    font-size: 0.875rem;
+    font-weight: 500;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+header nav a:hover,
+header nav a.active {
+    background-color: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35);
+}
+
+header nav a.nav-btn-login {
+    background-color: #2563eb;
+    color: #ffffff !important;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+}
+
+header nav a.nav-btn-login:hover {
+    background-color: #1d4ed8;
+    color: #ffffff !important;
+    transform: translateY(-1px);
+}
+
+header nav a.nav-btn-register {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #f1f5f9;
+}
+
+header nav a.nav-btn-register:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+footer nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Main Content Container */
+main {
+    flex: 1;
+    max-width: 1040px;
+    width: 100%;
+    margin: 1.75rem auto;
+    padding: 0 1.25rem;
+    box-sizing: border-box;
+}
+
+/* Layout Sections & Panels */
+section {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.75rem;
+    margin-bottom: 1.75rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+}
+
+body.dark-theme section {
+    background-color: #1e293b;
+    border-color: #334155;
+    color: #f1f5f9;
+}
+
+/* Aside / Sidebar Panel */
+aside {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #2563eb;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.75rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.03);
+}
+
+body.dark-theme aside {
+    background-color: #1e293b;
+    border-color: #334155;
+    border-left-color: #3b82f6;
+    color: #f1f5f9;
+}
+
+aside h2 {
+    border-bottom: 1px solid #cbd5e1;
+    font-size: 1.15rem;
+    margin-top: 0;
+    padding-bottom: 0.5rem;
+    color: #0f172a;
+}
+
+body.dark-theme aside h2 {
+    color: #f1f5f9;
+    border-bottom-color: #334155;
+}
+
+/* Footer */
+footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+footer nav {
+    margin-bottom: 1rem;
+}
+
+footer nav a {
+    color: #cbd5e1;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+footer nav a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+footer p {
+    font-size: 0.85rem;
+    margin: 0;
+}

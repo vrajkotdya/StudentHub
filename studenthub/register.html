@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Student Registration Form for CHARUSAT StudentHub portal.">
+  <title>Student Registration | StudentHub</title>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header role="banner">
+    <div>
+      <p><strong>CHAROTAR UNIVERSITY OF SCIENCE AND TECHNOLOGY (CHARUSAT)</strong></p>
+      <h1>StudentHub Portal</h1>
+      <p>Faculty of Technology and Engineering (FTE) &bull; Academic Year 2026-27</p>
+    </div>
+
+    <nav role="navigation" aria-label="Primary Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="events.html">Campus Events</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="register.html" aria-current="page"><strong>Student Register</strong></a></li>
+        <li><a href="login.html">Sign In</a></li>
+        <li><a href="student-dashboard.html">Student Portal</a></li>
+        <li><a href="admin-dashboard.html">Admin Portal</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <hr>
+
+  <nav aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html">Home</a> &gt;</li>
+      <li aria-current="page"><strong>Student Registration</strong></li>
+    </ol>
+  </nav>
+
+  <hr>
+
+  <main id="main-content" role="main">
+
+    <section aria-labelledby="reg-heading">
+      <h2 id="reg-heading">Create Your StudentHub Account</h2>
+      <p>Fill out the official student registration form below to access department circulars, register for events, and manage your digital academic profile.</p>
+    </section>
+
+    <!-- Student Registration Form -->
+    <section aria-labelledby="form-section-title">
+      <h3 id="form-section-title">Student Enrollment &amp; Authentication Details</h3>
+
+      <form action="#" method="post" aria-label="Student Registration Form" id="registration-form">
+
+        <!-- Personal Information -->
+        <fieldset>
+          <legend><strong>1. Personal &amp; Contact Details</strong></legend>
+
+          <p>
+            <label for="reg-name">Full Name (as per Grade Card): <span aria-hidden="true">*</span></label><br>
+            <input type="text" id="reg-name" name="name" required placeholder="e.g. Yashvi Prajapati" autocomplete="name">
+          </p>
+
+          <p>
+            <label for="reg-roll">Student Roll / Enrollment Number: <span aria-hidden="true">*</span></label><br>
+            <input type="text" id="reg-roll" name="roll_no" required placeholder="e.g. 24CE045" pattern="[0-9]{2}[A-Za-z]{2}[0-9]{3}">
+            <br><small>Format: 2 digits year + 2 letters branch + 3 digits roll (e.g. 24CE045)</small>
+          </p>
+
+          <p>
+            <label for="reg-email">CHARUSAT Student Email ID: <span aria-hidden="true">*</span></label><br>
+            <input type="email" id="reg-email" name="email" required placeholder="e.g. 24ce045@charusat.edu.in" autocomplete="email">
+            <br><small>Please use your official university or personal primary email</small>
+          </p>
+
+          <p>
+            <label for="reg-mobile">Mobile Number: <span aria-hidden="true">*</span></label><br>
+            <input type="tel" id="reg-mobile" name="mobile" required placeholder="10-digit mobile number" pattern="[0-9]{10}" autocomplete="tel">
+            <br><small>10-digit Indian mobile number without +91</small>
+          </p>
+
+          <!-- Accessible Radio Button Group for Gender -->
+          <fieldset>
+            <legend>Gender: <span aria-hidden="true">*</span></legend>
+            <label><input type="radio" name="gender" value="male" required> Male</label> &nbsp;
+            <label><input type="radio" name="gender" value="female"> Female</label> &nbsp;
+            <label><input type="radio" name="gender" value="other"> Other / Prefer not to say</label>
+          </fieldset>
+        </fieldset>
+
+        <br>
+
+        <!-- Academic Information -->
+        <fieldset>
+          <legend><strong>2. Academic Enrollment</strong></legend>
+
+          <p>
+            <label for="reg-dept">Engineering Department / Course: <span aria-hidden="true">*</span></label><br>
+            <select id="reg-dept" name="department" required>
+              <option value="">-- Select Department --</option>
+              <option value="ce">Computer Engineering (CSPIT-CE)</option>
+              <option value="cse">Computer Science &amp; Engineering (DEPSTAR-CSE)</option>
+              <option value="it">Information Technology (CSPIT-IT / DEPSTAR-IT)</option>
+              <option value="aiml">Artificial Intelligence &amp; Machine Learning (CSPIT-AIML)</option>
+              <option value="ec">Electronics &amp; Communication Engineering (CSPIT-EC)</option>
+            </select>
+          </p>
+
+          <fieldset>
+            <legend>Current Academic Year: <span aria-hidden="true">*</span></legend>
+            <label><input type="radio" name="year" value="1" required> 1st Year (B.Tech)</label> &nbsp;
+            <label><input type="radio" name="year" value="2"> 2nd Year (B.Tech)</label> &nbsp;
+            <label><input type="radio" name="year" value="3" checked> 3rd Year (B.Tech)</label> &nbsp;
+            <label><input type="radio" name="year" value="4"> 4th Year (B.Tech)</label>
+          </fieldset>
+        </fieldset>
+
+        <br>
+
+        <!-- Account Security -->
+        <fieldset>
+          <legend><strong>3. Security Credentials &amp; Passwords</strong></legend>
+
+          <p>
+            <label for="reg-password">Create Account Password: <span aria-hidden="true">*</span></label><br>
+            <input type="password" id="reg-password" name="password" required minlength="8" autocomplete="new-password">
+            <br><small>Minimum 8 characters with at least one number and one symbol</small>
+          </p>
+
+          <p>
+            <label for="reg-confirm-password">Confirm Password: <span aria-hidden="true">*</span></label><br>
+            <input type="password" id="reg-confirm-password" name="confirm_password" required minlength="8" autocomplete="new-password">
+          </p>
+
+          <p>
+            <input type="checkbox" id="reg-terms" name="terms" required>
+            <label for="reg-terms">I agree to the <a href="about.html">CHARUSAT Student Code of Conduct</a> and portal terms. <span aria-hidden="true">*</span></label>
+          </p>
+
+          <p>
+            <button type="submit">Complete Registration</button>
+            <button type="reset">Clear Entries</button>
+          </p>
+        </fieldset>
+
+      </form>
+    </section>
+
+    <hr>
+
+    <aside aria-labelledby="existing-user-heading">
+      <h3 id="existing-user-heading">Already Have an Account?</h3>
+      <p>If you have already created your student account, proceed to the <a href="login.html">Sign In Page &rarr;</a></p>
+    </aside>
+
+  </main>
+
+  <hr>
+
+  <footer role="contentinfo">
+    <p>&copy; 2026-27 StudentHub &bull; Faculty of Technology and Engineering (FTE)</p>
+    <p>Charotar University of Science and Technology (CHARUSAT), Changa, Gujarat, India - 388421</p>
+    <nav aria-label="Footer Quick Links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Portal</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="feedback.html">Student Feedback</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+</body>
+</html>

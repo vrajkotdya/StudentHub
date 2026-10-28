@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Student Profile and Digital University Identity Card on StudentHub.">
+  <title>Student Profile &amp; ID Card | StudentHub</title>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header role="banner">
+    <div>
+      <p><strong>CHAROTAR UNIVERSITY OF SCIENCE AND TECHNOLOGY (CHARUSAT)</strong></p>
+      <h1>StudentHub &mdash; Student Portal</h1>
+      <p>Logged in as: <strong>Alex Patel (24CE042)</strong></p>
+    </div>
+
+    <nav role="navigation" aria-label="Student Navigation">
+      <ul>
+        <li><a href="student-dashboard.html">Dashboard</a></li>
+        <li><a href="student-profile.html" aria-current="page"><strong>My Profile &amp; ID</strong></a></li>
+        <li><a href="events.html">Browse Events</a></li>
+        <li><a href="feedback.html">Give Feedback</a></li>
+        <li><a href="contact.html">Helpdesk</a></li>
+        <li><a href="login.html">Log Out</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <hr>
+
+  <nav aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html">Home</a> &gt;</li>
+      <li><a href="student-dashboard.html">Student Portal</a> &gt;</li>
+      <li aria-current="page"><strong>Profile &amp; ID Card</strong></li>
+    </ol>
+  </nav>
+
+  <hr>
+
+  <main id="main-content" role="main">
+
+    <!-- Digital ID Card Section -->
+    <section aria-labelledby="id-card-title">
+      <h2 id="id-card-title">University Digital Student Identity Card</h2>
+
+      <figure>
+        <figcaption><strong>CHARUSAT Faculty of Technology and Engineering (FTE) — Student Identity</strong></figcaption>
+        <p><em>[Student Photo: Alex Patel &bull; Enrollment: 24CE042]</em></p>
+      </figure>
+
+      <dl>
+        <dt><strong>Full Name:</strong></dt>
+        <dd>Alex Rajendra Patel</dd>
+
+        <dt><strong>Enrollment Number:</strong></dt>
+        <dd>24CE042</dd>
+
+        <dt><strong>Department / Institute:</strong></dt>
+        <dd>Department of Computer Engineering (CSPIT)</dd>
+
+        <dt><strong>Current Academic Standing:</strong></dt>
+        <dd>B.Tech Computer Engineering &bull; 3rd Semester (2nd Year)</dd>
+
+        <dt><strong>Institutional Email:</strong></dt>
+        <dd>24ce042@charusat.edu.in</dd>
+
+        <dt><strong>Blood Group:</strong></dt>
+        <dd>B+ Positive</dd>
+
+        <dt><strong>Valid Till:</strong></dt>
+        <dd>June 2028</dd>
+      </dl>
+    </section>
+
+    <hr>
+
+    <!-- Update Contact Information Form -->
+    <section aria-labelledby="update-profile-title">
+      <h3 id="update-profile-title">Update Contact &amp; Residential Information</h3>
+
+      <form action="#" method="post" aria-label="Update Profile Form">
+        <fieldset>
+          <legend><strong>Editable Information</strong></legend>
+
+          <p>
+            <label for="prof-phone">Primary Mobile Number: <span aria-hidden="true">*</span></label><br>
+            <input type="tel" id="prof-phone" name="phone" value="9876543210" required pattern="[0-9]{10}">
+          </p>
+
+          <p>
+            <label for="prof-emergency">Emergency Parent / Guardian Contact: <span aria-hidden="true">*</span></label><br>
+            <input type="tel" id="prof-emergency" name="emergency_phone" value="9898989898" required pattern="[0-9]{10}">
+          </p>
+
+          <p>
+            <label for="prof-address">Residential / Hostel Address: <span aria-hidden="true">*</span></label><br>
+            <textarea id="prof-address" name="address" rows="4" cols="45" required>Hostel Block C, Room 204, CHARUSAT Campus, Changa, Gujarat - 388421</textarea>
+          </p>
+
+          <p>
+            <label for="prof-linkedin">LinkedIn / GitHub Profile URL:</label><br>
+            <input type="url" id="prof-linkedin" name="portfolio_url" placeholder="https://github.com/username">
+          </p>
+
+          <p>
+            <button type="submit">Save Profile Changes</button>
+            <button type="reset">Revert Changes</button>
+          </p>
+        </fieldset>
+      </form>
+    </section>
+
+  </main>
+
+  <hr>
+
+  <footer role="contentinfo">
+    <p>&copy; 2026-27 StudentHub &bull; Faculty of Technology and Engineering (FTE)</p>
+    <p>Charotar University of Science and Technology (CHARUSAT), Changa, Gujarat, India - 388421</p>
+    <nav aria-label="Footer Quick Links">
+      <ul>
+        <li><a href="index.html">Public Home</a></li>
+        <li><a href="student-dashboard.html">Dashboard</a></li>
+        <li><a href="student-profile.html">Profile</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="contact.html">Helpdesk</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+</body>
+</html>

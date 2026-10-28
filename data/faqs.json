@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "category": "general",
+    "categoryLabel": "General",
+    "question": "How do I create a student account on StudentHub?",
+    "answer": "Click on the Register link in the navigation menu. Fill in your name, college email, mobile number, course, year of study, and create a secure password."
+  },
+  {
+    "id": 2,
+    "category": "general",
+    "categoryLabel": "General",
+    "question": "What should I do if I forget my password?",
+    "answer": "During the current phase, you can contact the campus IT Helpdesk or submit an inquiry through the Contact Us page to request a password reset."
+  },
+  {
+    "id": 3,
+    "category": "general",
+    "categoryLabel": "General",
+    "question": "Can I update my registered contact details?",
+    "answer": "Yes. Once logged in, visit your Profile page to update your phone number, alternate email address, and residential address."
+  },
+  {
+    "id": 4,
+    "category": "academic",
+    "categoryLabel": "Academics",
+    "question": "How can I view my enrolled courses and attendance?",
+    "answer": "Your Student Dashboard lists all currently registered subjects, credit points, semester breakdown, and real-time attendance percentages."
+  },
+  {
+    "id": 5,
+    "category": "academic",
+    "categoryLabel": "Academics",
+    "question": "When are semester exam admit cards published?",
+    "answer": "Admit cards are generally released two weeks before the commencement of end-semester examinations on the student dashboard notices."
+  },
+  {
+    "id": 6,
+    "category": "events",
+    "categoryLabel": "Events",
+    "question": "Who is eligible to participate in college events?",
+    "answer": "All active students enrolled across any undergraduate or postgraduate program are eligible. Check each event listing on the Events page for specific criteria."
+  },
+  {
+    "id": 7,
+    "category": "events",
+    "categoryLabel": "Events",
+    "question": "Will I receive a certificate for attending workshops?",
+    "answer": "Yes, all registered participants who complete workshop and seminar sessions will receive verified digital certificates issued by the organizing department."
+  },
+  {
+    "id": 8,
+    "category": "support",
+    "categoryLabel": "Support",
+    "question": "Where can I report a campus grievance or facility issue?",
+    "answer": "You can use the Feedback page to submit detailed feedback or visit the Dean of Student Welfare office during standard campus hours."
+  },
+  {
+    "id": 9,
+    "category": "support",
+    "categoryLabel": "Support",
+    "question": "How do I contact the college administration office?",
+    "answer": "Head over to the Contact page for administrative office hours, department phone extensions, official mailing addresses, and location maps."
+  }
+]
