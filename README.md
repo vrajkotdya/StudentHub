@@ -134,19 +134,7 @@ StudentHub/
 
 ---
 
-## Security & Registration Architecture (Version 9)
 
-- **Password Hashing:**
-  - Uses PHP's native `password_hash($password, PASSWORD_DEFAULT)` generating standard 60-character BCRYPT hashes with automatic salting.
-  - Plain-text passwords are **NEVER** stored in MySQL, JSON files, or CSV logs.
-  - Future authentication checks in Version 10 use `password_verify($password, $hash)`.
-- **Relational User & Student Records:**
-  - `users` table: Holds `username`, `email`, `password` (hash), and `role` (`student`).
-  - `students` table: Holds student academic info (`roll_no`, `name`, `course`, `year`, `mobile`, `gender`, `status`) and links `user_id` &rarr; `users.id` via foreign key with `ON DELETE SET NULL`.
-- **Duplicate Prevention:**
-  - Validates email uniqueness across both MySQL `users` and `students` tables, as well as JSON storage fallback.
-- **Automated Database Setup:**
-  - Run `php setup_database.php` via CLI or open `http://localhost:8080/StudentHub/setup_database.php` in the browser to re-seed tables with pre-hashed credentials.
 
 
 
